@@ -1,0 +1,54 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+.login-page{
+    background-image: url("../../assets/12-Dark.jpg");
+    // background-position: 0 -500px;
+    display: flex;
+    justify-content: center;   // Center horizontally
+    align-items: center;       // Center vertically
+    height: 100vh;
+    background-size: cover;    // Cover the entire background
+    backdrop-filter: blur(10px);   // Apply blur to the background
+    -webkit-backdrop-filter: blur(10px); 
+    h1{
+        color: white;
+    }
+}
+.input-card {
+    height: 700px;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(255, 255, 255, 0.3);  // Semi-transparent white background
+    backdrop-filter: blur(10px);           // Blur effect on the background
+    -webkit-backdrop-filter: blur(10px);   
+    padding: 20px;                         
+    border-radius: 10px;                   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;                        
+  }
+  
+  .input-card input, .input-card button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;                // Ensure padding doesn't affect width
+  }
+  
+  .input-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .input-card button:hover {
+    background-color: #0056b3;
+  }
