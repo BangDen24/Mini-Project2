@@ -41,5 +41,11 @@
         background-color: blue;
         color: white;
     }
+    button:disabled{
+      background-color: grey;
+      cursor: not-allowed;
+      pointer-events: none;
+      color: white;
+    }
   }
   
