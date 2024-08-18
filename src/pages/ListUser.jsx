@@ -35,7 +35,6 @@ const ListUser = () => {
     })
   }
   
-//lifecycle hooks
   useEffect(() =>{
     getUser();
   }, []);

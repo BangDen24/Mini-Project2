@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import "./styles/Login.scss";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -46,13 +46,13 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      {/* <Navbar /> */}
-      <div className="input-card">
+      <Navbar />
+      <div className="login">
+      <div className="login-form">
       {success && <p style={{ color: "green", display: "block" }}>{success}</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <h1>Welcome to Login Page</h1>
-      <p>Please login first before accessing other pages</p>
-      <div className="login-form">
+      <h1>Welcome Back!</h1>
+      <p>Enter your email and password to sign in</p>
         <label>Email </label>
         <input
           onChange={handleEmail}
@@ -68,8 +68,9 @@ const Login = () => {
           value={password}
         />
         <button onClick={handleLogin}>Login</button>
+        <p>Don't have an account? <Link to="/register" className="sign-up-link">Sign Up</Link></p>
       </div>
-      </div>
+    </div>
     </div>
   );
 };

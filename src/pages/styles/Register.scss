@@ -1,0 +1,140 @@
+:root{
+  --main-color: #F7FAFC;
+  --main-font: sans-serif; 
+  --sec-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --main-font-color:rgb(26, 32, 44);
+  --sec-font-color:#5d646d;
+  --accent-color:#1A0441;
+  --accent-color-m:#34126e;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+.register-page{
+  overflow: hidden;
+  height: 100vh;
+  background-color: var(--main-color);
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .background-overlay{
+      background-color: var(--accent-color);
+      position: absolute;
+      width: 80vw;
+      height: 50vh;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0;
+      border-radius: 0 0 15px 15px;
+    }
+    .navbar{
+      width: 80vwvw;
+      border-radius: 0%;
+      box-shadow: none;
+      backdrop-filter: none;
+      background: transparent;
+      & *{
+        color: var(--main-color);
+      }
+      
+    }
+}
+.register{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  width: 30vw;
+}
+
+.register-form{
+  background-color: var(--main-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.329);
+  max-width: 40vw;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+
+  &.slide-in {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  h1{
+    font-family: var(--sec-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+  p{
+    font-family: var(--main-font); ;
+    font-weight: 700;
+    color: var(--sec-font-color);
+  }
+  a{
+    text-decoration: none;
+    color: var(--accent-color-m);
+    font-weight: 700;
+    font-family: var(--main-font);
+  }
+  button{
+      background-color: var(--accent-color);
+      margin-top: 2vw;
+      margin-bottom: 1vw;
+      width: 100%;
+      padding: 0.75rem;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: var(--main-font);
+      font-weight: 700;
+
+      &:hover{
+          background-color: var(--accent-color-m);
+      }
+  }
+  input{
+  height:2rem;
+  width:95%;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #CBD5E0;
+
+  }
+  label{
+      margin-left: 0.25vw;
+      margin-bottom: 0.5vh;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.5rem;  
+  }
+  .register-form p {
+  display: inline; /* Make sure the text and link are inline */
+  margin: 0; /* Reset any unwanted margins */
+}
+
+.login-link {
+  display: inline; /* Ensure the link stays inline with the text */
+  margin-left: 5px; /* Add a bit of spacing if necessary */
+}
+}

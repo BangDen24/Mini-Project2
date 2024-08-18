@@ -1,57 +1,99 @@
-body{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-
-    
-}
-.login-page{
-    background-image: url("../../assets/12-Dark.jpg");
-    // background-position: 0 -500px;
-    display: flex;
-    justify-content: center;   // Center horizontally
-    align-items: center;       // Center vertically
+:root{
+    --main-color: #F7FAFC;
+    --main-font: sans-serif; 
+    --sec-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    --main-font-color:rgb(26, 32, 44);
+    --sec-font-color:#5d646d;
+    --accent-color:#1A0441;
+    --accent-color-m:#34126e;
+  }
+  .login-page{
+    overflow: hidden;
     height: 100vh;
-    background-size: cover;    // Cover the entire background
-    backdrop-filter: blur(10px);   // Apply blur to the background
-    -webkit-backdrop-filter: blur(10px); 
-    h1{
-        color: white;
-    }
-}
-.input-card {
-    height: 400px;
-    width: 50vw;
+    background-color: var(--main-color);
+      padding: 0;
+      margin: 0;
+      font-family: var(--main-font);
+      color: var(--main-font-color);
+      background-image: url(../../assets/logobackground.png);
+      background-size: 40% auto;
+      background-repeat: no-repeat;
+      background-position: 110% -1000%;
+      display: flex;
+      flex-direction: column;
+      .navbar{
+        width: 60vw;
+      }
+  }
+  .login{
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.3);  // Semi-transparent white background
-    backdrop-filter: blur(10px);
-    padding: 20px;                         
-    border-radius: 10px;                   
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;                        
+    justify-content: center;
+    align-items: center;
   }
   
-  .input-card input, .input-card button {
-    // width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;                // Ensure padding doesn't affect width
-  }
-  
-  .input-card button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .input-card button:hover {
-    background-color: #0056b3;
-  }
   .login-form{
+    margin-right: 25%;
+    margin-bottom: 10%;
+    padding: 2rem;
+    border-radius: 8px;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.329);
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    h1{
+      font-family: var(--sec-font);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+    p{
+      font-family: var(--main-font); ;
+      font-weight: 700;
+      color: var(--sec-font-color);
+    }
+    a{
+      text-decoration: none;
+      color: var(--accent-color-m);
+      font-weight: 700;
+      font-family: var(--main-font);
+    }
+    button{
+        background-color: var(--accent-color);
+        margin-top: 2vw;
+        margin-bottom: 1vw;
+        width: 100%;
+        padding: 0.75rem;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: var(--main-font);
+        font-weight: 700;
+
+        &:hover{
+            background-color: var(--accent-color-m);
+        }
+    }
+    input{
+    height:2rem;
+    width:95%;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #CBD5E0;
+
+    }
+    label{
+        margin-left: 0.25vw;
+        margin-bottom: 0.5vh;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 0.5rem;  
+    }
   }
+  
