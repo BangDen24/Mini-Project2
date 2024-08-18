@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import "./styles/Navbar.scss";
+import "./styles/Listbar.scss";
 
 const Listbar = () => {
   const isLoggedin = localStorage.getItem("access_token") !== null;
@@ -12,7 +12,7 @@ const Listbar = () => {
   };
 
   return (
-    <div className="Listbar">
+    <div className="listbar">
       <Link to="/">
         <svg
           width="30"
@@ -69,8 +69,9 @@ const Listbar = () => {
           <circle cx="154" cy="708" r="35" fill="currentColor" />
           <circle cx="924" cy="380" r="35" fill="currentColor" />
         </svg>
+        <h3>NovaLabs.</h3>
       </Link>
-      <div className="navbar-links">
+      <div className="listbar-links">
         <Link to={"/"}>
           <div className="dashboard-link">
             <svg
@@ -165,7 +166,7 @@ const Listbar = () => {
           </div>
         </Link>
       </div>
-      {isLoggedin && <button onClick={handleLogout}>Logout</button>}
+      {isLoggedin && <button className="logout-btn" onClick={handleLogout}>Logout</button>}
     </div>
   );
 };

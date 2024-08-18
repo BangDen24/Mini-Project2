@@ -1,0 +1,79 @@
+:root{
+    --main-color: #F7FAFC;
+    --main-font: sans-serif; 
+    --sec-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    --main-font-color:rgb(26, 32, 44);
+    --sec-font-color:#5d646d;
+    --accent-color:#1A0441;
+    --accent-color-m:#34126e;
+  }
+html{
+    padding: 0;
+    margin: 0;
+}
+.listbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 10vw;
+    height:90vh;
+    backdrop-filter: blur(10px);
+    background-color: var(--main-color);
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.288);
+    z-index: 1000;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    &>*{
+        margin: 0 1.5vw;
+    }
+    a{
+        text-decoration: none;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0.5vw;
+    }
+    &>*{  
+    color: var(--main-font-color);
+    font-family: var(--main-font);
+    font-weight: 600;
+}
+
+.logout-btn{
+    margin-top: auto; 
+    height: 5vh;
+    width: 50%;
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: 600;
+    border-radius: 1vh;
+}
+}
+.listbar-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+
+    *{
+    color: var(--main-font-color);
+}
+
+svg{
+    height: 20px;
+    color: var(--accent-color-m) !important;
+}
+}
+.dashboard-link, .login-link, .register-link, .user-link{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
