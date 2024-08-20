@@ -96,4 +96,48 @@
         margin-bottom: 0.5rem;  
     }
   }
-  
+@media (max-width: 768px) {
+  .login-page {
+    .navbar {
+      align-self: center;
+      width: 100vw;
+
+      button{
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .login {
+    padding: 0 1rem;
+  }
+
+  .login-form {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .login-form h1 {
+    font-size: 24px;
+  }
+
+  .login-form p {
+    font-size: 14px;
+  }
+
+  .login-form button {
+    font-size: 0.9rem;
+  }
+
+  .login-form input {
+    height: 2.5rem;
+    width: 100%;
+  }
+
+  .login-form label {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}  
