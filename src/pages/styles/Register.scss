@@ -2,11 +2,10 @@
   --main-color: #F7FAFC;
   --main-font: sans-serif; 
   --sec-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  --main-font-color:rgb(26, 32, 44);
-  --sec-font-color:#5d646d;
-  --accent-color:#1A0441;
-  --accent-color-m:#34126e;
+  --main-font-color: rgb(26, 32, 44);
+  --sec-font-color: #5d646d;
+  --accent-color: #1A0441;
+  --accent-color-m: #34126e;
 }
 
 html, body{
@@ -18,37 +17,42 @@ html, body{
   overflow: hidden;
   height: 100vh;
   background-color: var(--main-color);
-    padding: 0;
-    margin: 0;
-    font-family: var(--main-font);
-    color: var(--main-font-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    .background-overlay{
-      background-color: var(--accent-color);
-      position: absolute;
-      width: 80vw;
-      height: 50vh;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: 0;
-      border-radius: 0 0 15px 15px;
+  .background-overlay{
+    background-color: var(--accent-color);
+    position: absolute;
+    width: 80vw;
+    height: 50vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .navbar{
+    width: 80vw; // Perbaiki kesalahan penulisan di sini
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: transparent;
+
+    & >*{
+      color: var(--main-color);
     }
-    .navbar{
-      width: 80vw;
-      border-radius: 0%;
-      box-shadow: none;
-      backdrop-filter: none;
-      background: transparent;
-      & *{
-        color: var(--main-color);
-      }
-      
+    &-links *{
+      color: var(--main-color);
     }
+  }
 }
+
 .register{
   flex: 1;
   display: flex;
@@ -61,11 +65,10 @@ html, body{
 .register-form{
   background-color: var(--main-color);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 15px; // Hapus duplikat border-radius
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.329);
   max-width: 40vw;
   width: 100%;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
   transform: translateY(100px);
@@ -83,93 +86,98 @@ html, body{
     font-weight: 700;
     color: var(--accent-color);
   }
+
   p{
-    font-family: var(--main-font); ;
+    font-family: var(--main-font);
     font-weight: 700;
     color: var(--sec-font-color);
   }
+
   a{
     text-decoration: none;
     color: var(--accent-color-m);
     font-weight: 700;
     font-family: var(--main-font);
   }
+
   button{
-      background-color: var(--accent-color);
-      margin-top: 2vw;
-      margin-bottom: 1vw;
-      width: 100%;
-      padding: 0.75rem;
-      color: white;
-      border: none;
-      border-radius: 15px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-family: var(--main-font);
-      font-weight: 700;
+    background-color: var(--accent-color);
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    padding: 0.75rem;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: 700;
 
-      &:hover{
-          background-color: var(--accent-color-m);
-      }
+    &:hover{
+      background-color: var(--accent-color-m);
+    }
   }
+
   input{
-  height:2rem;
-  width:95%;
-  border-radius: 15px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #CBD5E0;
-
+    height: 2rem;
+    width: 95%;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #CBD5E0;
   }
+
   label{
-      margin-left: 0.25vw;
-      margin-bottom: 0.5vh;
-      font-weight: 500;
-      display: block;
-      margin-bottom: 0.5rem;  
+    margin-left: 0.25vw;
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+    display: block;
   }
-  .register-form p {
-  display: inline; /* Make sure the text and link are inline */
-  margin: 0; /* Reset any unwanted margins */
-}
 
-.login-link {
-  display: inline; /* Ensure the link stays inline with the text */
-  margin-left: 5px; /* Add a bit of spacing if necessary */
-}
+  .register-form p {
+    display: inline;
+    margin: 0;
+  }
+
+  .login-link {
+    display: inline;
+    margin-left: 5px;
+  }
 }
 
 @media (max-width: 768px) {
-  .register-page{
-  .background-overlay{
-    width: 100vw;
-  }
-  .register-form{
-    width: 100vw;
-  }
-  .navbar{
-    padding-top: 1vh;
-
-    .hamburger-icon>span{
-      background-color: var(--main-font-color);
+  .register-page {
+    .background-overlay {
+      width: 100vw;
     }
-    .navbar-links { 
-    margin: 0;
-    border-radius: 8px;
-    display: none;
-    position: absolute;
-    top: 7vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--main-color);
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.288);
-    transform: translateX(-100%); // Awalnya diluar layar
-    transition: transform 0.3s ease-in-out;
-  }
-  }
+
+    .register-form {
+      width: 100vw;
+    }
+
+    .navbar {
+      padding-top: 1vh;
+      box-sizing: border-box;
+
+      .hamburger-icon::before, .hamburger-icon::after {
+        background-color: var(--main-color);
+      }
+
+    &-links.open {
+        background-color: var(--accent-color);
+        width: 100vw;
+        box-shadow: none;
+        // position: fixed; // Tambahkan jika navbar harus tetap pada tempatnya saat scroll
+        top: 7vh; // Tambahkan jika navbar harus berada di atas
+        left: 0; // Tambahkan untuk memastikan navbar dimulai dari tepi kiri
+        height: 100vh; // Tambahkan jika navbar harus memenuhi tinggi viewport
+        box-sizing: border-box; // Pastikan padding dan border tidak mempengaruhi lebar
+      }
+
+      .hamburger-icon > span {
+        background-color: var(--main-font-color); // Warna putih untuk garis hamburger
+      }
+    }
   }
 }

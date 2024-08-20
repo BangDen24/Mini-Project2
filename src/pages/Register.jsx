@@ -65,8 +65,8 @@ const Register = () => {
               onChange={handlePassword}
             />
             <button onClick={handleRegister}>Register</button>
-            {success && <p>{success}</p>}
-            {error && <p>{error}</p>}
+            {success && <p style={{ color: "green" }}>{success}</p>}
+            {error && <p style={{ color: "red" }}>{error}</p>}
             <p>
               Already have an account?{" "}
               <Link to="/login" className="login-link">
