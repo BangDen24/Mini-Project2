@@ -30,8 +30,8 @@ Proyek ini merupakan bagian dari mini project untuk kursus Frontend Development.
 ## Cara Menjalankan Proyek
 1. Clone repository dari GitHub.
    ```bash
-   git clone <link-repository-github>
-   cd nama-folder-proyek
+   git clone <https://github.com/BangDen24/Mini-Project2.git>
+   cd Mini-Project2
 
 2. Install Dependencies
    ```bash
