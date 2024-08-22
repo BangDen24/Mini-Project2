@@ -34,9 +34,11 @@ Proyek ini merupakan bagian dari mini project untuk kursus Frontend Development.
    cd nama-folder-proyek
 
 2. Install Dependencies
+   ```bash
    npm install
 
 3. Menjalankan project locally
+    ```bash
    npm run dev
 
 ## Catatan
